@@ -1,0 +1,22 @@
+.carousel-item::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+    opacity: 0.3;
+}
+
+ /*-- responsive del mapa */
+ .map-responsive{
+    overflow:hidden;
+    padding-bottom:25%;
+    position:relative;
+    height:0;
+}
+
+
+/**/
