@@ -67,9 +67,13 @@ input.error, textarea.error {
 </style>
 
 <script type="text/javascript">
-  function revisarCheckbox(){
-    if(document.getElementById("checkTyM").checked == false){
-      alert("Acepta los terminos y condiciones antes de enviar los datos");
+function revisarDatos(){
+    if(document.getElementById("checkTyM").checked == false ||
+       document.getElementsById("nombreEntrada").value.length == 0 ||
+       document.getElementsById("apellidoEntrada").value.length == 0 ||
+       document.getElementsById("emailEntrada").value.length == 0 ||
+       document.getElementsById("descripcionEntrada").value.length == 0){
+      alert("Debes aceptar los terminos y condiciones y/o llenar los campos obligatorios");
     }
     else{
       window.location.replace("registrarSolicitud.html");
@@ -83,15 +87,15 @@ input.error, textarea.error {
 <form class="row g-3" id="formularioSolicitud" name="formularioSolicitud" >
   <!--nombre-->
   <div class="col-md-4">
-    <input type="text" class="form-control" name="nombreEntrada" placeholder="Nombre">
+    <input type="text" class="form-control" name="nombreEntrada" id="nombreEntrada" placeholder="Nombre">
   </div>
   <!--apellido-->
   <div class="col-md-4">
-  <input type="text" class="form-control" name="apellidoEntrada" placeholder="Apellido">
+  <input type="text" class="form-control" name="apellidoEntrada" id="apellidoEntrada" placeholder="Apellido">
   </div>
   <!--correo-->
   <div class="col-md-4">
-    <input type="email" class="form-control" name="emailEntrada" placeholder="Direccion correo">
+    <input type="email" class="form-control" name="emailEntrada" id="emailEntrada" placeholder="Direccion correo">
   <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie</div>
   </div>
   <!--ciudad-->
@@ -110,7 +114,7 @@ input.error, textarea.error {
   <!--descripcion-->
   <div class="col">
     <label for="descripcionEntrada" class="form-label">Ingresa tu solicitud de planta (Nombre, especie, cuidados, etc)</label>
-    <textarea class="form-control" name="descripcionEntrada" rows="3"></textarea>
+    <textarea class="form-control" name="descripcionEntrada" id="descripcionEntrada" rows="3"></textarea>
   </div>
   <!--adjuntar archivo-->
   <div class="col-12">
@@ -119,7 +123,7 @@ input.error, textarea.error {
   </div>
   <!--checkbox-->
   <div class="col-12">
-    <div class="form-check">
+    <div class="form-check check">
       <input class="form-check-input" type="checkbox" value="" id="checkTyM" name="checkTyM" required>
       <label class="form-check-label" for="checkTyM">
         Acepto los <a href="terminosycondiciones.html">terminos y condiciones</a>
@@ -128,7 +132,7 @@ input.error, textarea.error {
   </div>
 
   <div class="col-12">
-    <button class="btn btn-success" type="button" id="enviarFormulario" onclick="revisarCheckbox()">Enviar solicitud</button>
+    <button class="btn btn-success" type="submit" id="enviarFormulario" onclick="revisarDatos()">Enviar solicitud</button>
   </div>
 </form>
 </div>
