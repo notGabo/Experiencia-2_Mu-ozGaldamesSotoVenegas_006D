@@ -1,0 +1,4 @@
+Alfredo Galdames // Mejoras pagina de contacto, con formulario validado, mapa, y eventos. Siendo todo esto responsivo
+Fabian Muñoz // Rediseño de cada galeria en las paginas de plantas, consumio la api webrest del clima, y aplico animaciones segun el clima que diga la api 
+Gabriel Soto // Rediseño de la pagina principal, creacion del easteregg en terminos y condiciones, Formulario para solicitud de plantas validado y ayuda general
+Jean Venegas // Consumio api de indicadores economicos agregada en la galeria de plantas, aplico conversion monetaria en precios y ayuda general
