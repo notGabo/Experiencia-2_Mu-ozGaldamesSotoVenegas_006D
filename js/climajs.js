@@ -1,7 +1,7 @@
 $(document).ready(function(){
           
     $.ajax({
-            url:"https://api.weatherapi.com/v1/forecast.json?key=7623d859c2064971934171222222704 &q=auto:ip&days=1&aqi=no&alerts=no", 
+            url:"https://api.weatherapi.com/v1/forecast.json?key=7623d859c2064971934171222222704&q=auto:ip&days=1&aqi=no&alerts=no", 
                 type: "GET",
                 success: function(resultado){
                     let temperaturaValor = document.getElementById('temperatura-valor');
