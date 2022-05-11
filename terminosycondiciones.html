@@ -19,7 +19,7 @@
     <center><H1>PROFE POR FAVOR</H1>
     <H2>PONGANOS UN 7</H2>
     <H3>O MORIRA OTRO GATITO</H3></center>
-    <pre class="container ">
+    <pre id="gatotruco" class="container ">
         <h4>
                           _
                       .__(.)< (Profe si no nos pone un 7 el gato se va a morir aplastado)      
@@ -41,28 +41,28 @@
 <script type="text/javascript">
 function revisarNota() {
     var nota = document.getElementById("notaxd").value;
-
     parseInt(nota);
-
-        if (nota == 7) {
+        if (nota == null || nota == ' ' || nota == 0 ){
+            alert('¿Como es eso de que no nos quiere poner nota?🧐🧐');
+        }
+        else if (nota == 7) {
+            document.getElementById("gatotruco").innerHTML = ("<center><img src='http://www.drodd.com/images10/funny-cat-gifs19.gif'></img></center>");
+            alert("Salvo al gatito!11!!1!!!");
             window.open("https://youtu.be/A_6wm8HVaVY?t=3");
         } else if (nota < 7) {
             alert("Acaba de matar otro gatito...");
-            return false;
+            document.getElementById("gatotruco").innerHTML = ("<center><img src='https://c.tenor.com/bNLdWjv-mMUAAAAC/dead-chat-xd-dead-cat-xd.gif'></img></center>");
         } else if (nota > 7) {
-            alert("Por mi feliz que nos ponga un "+nota+" pero solo se puede hasta 7 lamentablemente")
-            return false;
+            alert("Por mi feliz que nos ponga un "+nota+" pero solo se puede hasta 7 lamentablemente");
+            document.getElementById("gatotruco").innerHTML = ("<center><img src='https://c.tenor.com/MdkTAaFGhRUAAAAM/cat-standing.gif'></img></center>");
         } 
-
 }
 </script>
 
 <center>
-    <form id="eastereggxd">
         <label for="nota">Nota:</label>
         <input id="notaxd" name="nota" type="number" placeholder="7" min="1" max="7" step="0.1">
-        <input type="button" value="Poner nota" onclick="revisarNota()">
-    </form>
+        <input id="botonNotaxd"type="button" value="Poner nota" onclick="revisarNota();">
 </center>
 
   <!-- Fin de la pagina -->
