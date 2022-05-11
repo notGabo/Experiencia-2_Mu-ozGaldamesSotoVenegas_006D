@@ -3,6 +3,12 @@ $(document).ready(function(){
             url:"https://mindicador.cl/api", 
                 type: "GET",
                 success: function(resultado){
+                    //fecha 
+                    let fecha = resultado.dolar.fecha.slice(0,10);
+                    
+                    //hora
+                    
+                    let hora = resultado.dolar.fecha.slice(11,-5)
                     
                     //variable que guarda el valor del dolar en clp
                     var valores = resultado.dolar.valor;
@@ -75,6 +81,10 @@ $(document).ready(function(){
                     final9 = resultado9.toFixed(2);
                     $("#clp9").html("Precio USD: "+"<b>"+"$"   +final9 +"</b>" );
 
+
+                    $("#valorDolar").html("Valor dolar = $"+valores)
+
+                    $("#fecha").html("Ultima actualizacion: "+fecha+" "+hora )
 
                        
                 },
