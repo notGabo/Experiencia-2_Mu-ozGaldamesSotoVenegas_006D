@@ -74,3 +74,32 @@ jQuery.validator.addMethod("noEspacio",function(value, element) {
       });
    }
 });
+
+
+
+
+function mouseover(a){
+   a.style.color= "#1D8348";
+   a.style.fontSize ="70px";
+   a.style.transitionDuration=".5s";
+}
+function mouseout(a){
+   a.style.color= "black";
+   a.style.fontSize ="56px";
+}
+
+function mouseover2(b){
+   b.style.color="black";
+}
+function mouseout2(b){
+   b.style.color="white";
+}
+function mouseover3(a){
+   a.style.color= "#1D8348";
+   a.style.fontSize ="35px";
+   a.style.transitionDuration=".5s";
+}
+function mouseout3(a){
+   a.style.color= "black";
+   a.style.fontSize ="28px";
+}
